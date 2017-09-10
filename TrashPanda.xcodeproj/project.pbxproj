@@ -12,8 +12,8 @@
 		834273091F649216001694AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834273071F649216001694AB /* Main.storyboard */; };
 		8342730B1F649216001694AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8342730A1F649216001694AB /* Assets.xcassets */; };
 		8342730E1F649216001694AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8342730C1F649216001694AB /* LaunchScreen.storyboard */; };
-		83949DFA1F64941A00C95961 /* TrashPandaBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83949DF91F64941A00C95961 /* TrashPandaBrain.swift */; };
 		9DB610A7730F12AEDC40E5F9 /* Pods_TrashPanda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7B586F7C99B7E13A4DEF73 /* Pods_TrashPanda.framework */; };
+		B55EF64B1F64CAB0003CDA98 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55EF64A1F64CAB0003CDA98 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,7 @@
 		8342730A1F649216001694AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8342730D1F649216001694AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8342730F1F649216001694AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83949DF91F64941A00C95961 /* TrashPandaBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashPandaBrain.swift; sourceTree = "<group>"; };
+		B55EF64A1F64CAB0003CDA98 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		FB766B02A08EFDB4CB52B652 /* Pods-TrashPanda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrashPanda.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrashPanda/Pods-TrashPanda.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,9 +76,9 @@
 				834273051F649216001694AB /* ViewController.swift */,
 				834273071F649216001694AB /* Main.storyboard */,
 				8342730A1F649216001694AB /* Assets.xcassets */,
-				83949DF91F64941A00C95961 /* TrashPandaBrain.swift */,
 				8342730C1F649216001694AB /* LaunchScreen.storyboard */,
 				8342730F1F649216001694AB /* Info.plist */,
+				B55EF64A1F64CAB0003CDA98 /* TableViewController.swift */,
 			);
 			path = TrashPanda;
 			sourceTree = "<group>";
@@ -218,7 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				834273061F649216001694AB /* ViewController.swift in Sources */,
-				83949DFA1F64941A00C95961 /* TrashPandaBrain.swift in Sources */,
+				B55EF64B1F64CAB0003CDA98 /* TableViewController.swift in Sources */,
 				834273041F649216001694AB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = TrashPanda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jdidat.trashpanda;
@@ -373,6 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = TrashPanda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jdidat.trashpanda;

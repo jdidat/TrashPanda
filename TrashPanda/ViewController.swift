@@ -9,14 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-    
     var data = [String]()
     @IBOutlet weak var postTable: UITableView!
     @IBOutlet weak var inputText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        postTable.dataSource = self
+        postTable.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,8 +28,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBAction func post(_ sender: UIButton) {
         if let inputString = inputText.text {
             data.append(inputString)
-            self.postTable.reloadData()
-            postTable.resignFirstResponder()
+            DispatchQueue.main.async{
+                self.postTable.reloadData()
+            }
         }
     }
     
@@ -42,12 +44,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return data.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = postTable.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        let row = indexPath.row
-        cell.textLabel?.text = data[row]
-        
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Row") as UITableViewCell!
+        cell?.textLabel?.text = data[indexPath.row]
+        return cell!
     }
 }
 
