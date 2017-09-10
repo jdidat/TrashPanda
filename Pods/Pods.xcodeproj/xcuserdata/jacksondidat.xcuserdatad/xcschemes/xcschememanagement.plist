@@ -4,11 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>TrashPanda.xcscheme</key>
+		<key>Pods-TrashPanda.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict/>
 </dict>
 </plist>
