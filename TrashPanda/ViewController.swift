@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var asscake: UILabel!
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    var toggle = true
+    var data = [String]()
+    @IBOutlet weak var postTable: UITableView!
+    @IBOutlet weak var inputText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +25,29 @@ class ViewController: UIViewController {
     }
 
     @IBAction func post(_ sender: UIButton) {
-        if (toggle) {
-            asscake.text = "titcake"
+        if let inputString = inputText.text {
+            data.append(inputString)
+            self.postTable.reloadData()
+            postTable.resignFirstResponder()
         }
-        else {
-            asscake.text = "asscake"
-        }
-        toggle = !toggle 
     }
     
+    
+    //TABLE METHODS
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = postTable.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        let row = indexPath.row
+        cell.textLabel?.text = data[row]
+        
+        return cell
+    }
 }
 
